@@ -30,9 +30,9 @@ export default function Button({ type, profileData, chatData }: IButton) {
             src = '/profile-fallback.png'
         }
         return (
-            <button className="chat-btn profile-btn">
+            <button className="chat-btn profile-btn mt-[18px]">
                 <Image src={src} alt={'Notepad'} width={31} height={31} />
-                {profileData ? profileData?.username : 'No username'}
+                {profileData ? profileData?.username : 'Dallas Y.'}
             </button>
         );
     }

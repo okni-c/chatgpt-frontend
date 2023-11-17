@@ -17,7 +17,7 @@ body {
 }
 
 p {
-    @apply text-[var(--light-text)] text-lg;
+    @apply text-[var(--light-text)] text-base;
 }
 
 .login-heading {
@@ -53,15 +53,15 @@ input:-webkit-autofill:active {
 }
 
 .sidebar {
-    @apply bg-[--background-gray] w-[225px] h-[96vh] m-[16px] rounded-xl border-[--border-outline] border px-[18px] py-[22px] flex flex-col justify-between;
+    @apply bg-[--background-gray] w-[225px] h-[96vh] m-[16px] rounded-xl border-[--border-outline] border p-[18px] flex flex-col justify-between;
 }
 
 .chat-btn {
-    @apply bg-[--background-dark] hover:bg-[--input-idle] transition-colors duration-150 ease-linear text-[--offwhite] w-full rounded-xl font-semibold active:bg-[--input-active] max-h-[48px] h-full truncate;
+    @apply bg-[--background-dark] hover:bg-[--input-idle] transition-colors duration-150 ease-linear text-[--offwhite] w-full rounded-xl font-semibold active:bg-[--input-active] max-h-[45px] h-full truncate text-sm;
 }
 
 .old-chat {
-    @apply p-3 my-[6px] min-h-[48px];
+    @apply p-3 my-[6px] min-h-[45px];
 }
 
 .new-chat {

@@ -1,9 +1,11 @@
+import ChatBox from "./ChatBox";
 import Sidebar from "./Sidebar";
 
 export default function ChatPage() {
     return (
-        <div>
+        <div className="flex">
             <Sidebar />
+            <ChatBox />
         </div>
     );
 }

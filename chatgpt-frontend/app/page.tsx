@@ -5,7 +5,7 @@ import Login from '@/components/Login'
 import { useState } from 'react'
 
 export default function Home() {
-  const [loggedIn, setLoggedIn] = useState<boolean>(true)
+  const [loggedIn, setLoggedIn] = useState<boolean>(false)
 
   function sendLog() {
     setLoggedIn(true)

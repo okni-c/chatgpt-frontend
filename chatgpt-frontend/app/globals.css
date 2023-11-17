@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background-dark: #16161A;
+    --offwhite: #FFFFFE;
+    --background-gray: #242629;
+    --light-text: #94A1B2;
+    --input-active: #7F5AF0;
+    --input-idle: #3E3263;
+    --border-outline: #303233;
+}
+
+body {
+    @apply bg-[var(--background-dark)];
+}
+
+p {
+    @apply text-[var(--light-text)] text-lg;
+}
+
+.login-heading {
+    @apply text-[40px] font-bold text-[var(--offwhite)];
+}
+
+.login-backdrop {
+    background: linear-gradient(180deg, #16161A 0%, rgba(22, 22, 26, 0.04) 52.6%, rgba(127, 90, 240, 0.16) 99.99%);
+    @apply h-screen;
+}
+
+.user-input-field {
+    @apply bg-[var(--background-gray)] px-[26px] py-[18px] text-[var(--offwhite)] focus:outline-none focus:border-[var(--input-active)] focus:ring-1 focus:ring-[var(--input-active)]
+    disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+    invalid:border-pink-500 invalid:text-pink-600
+    focus:invalid:border-pink-500 focus:invalid:ring-pink-500 rounded-2xl;
+}
+
+.user-input-field::placeholder {
+    @apply text-[var(--light-text)];
+}
+
+.login-btn {
+    @apply text-[var(--offwhite)] px-[32px] py-[12px] hover:bg-[--input-active] bg-[--input-idle] rounded-xl transition-colors duration-150 ease-linear focus:outline-none focus:border-[var(--input-active)] focus:bg-[--input-active] focus:ring-1 focus:ring-[var(--input-active)];
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: var(--offwhite);
+}
+
+.sidebar {
+    @apply bg-[--background-gray] w-[225px] h-[96vh] m-[16px] rounded-xl border-[--border-outline] border px-[18px] py-[22px] flex flex-col justify-between;
+}
+
+.chat-btn {
+    @apply bg-[--background-dark] hover:bg-[--input-idle] transition-colors duration-150 ease-linear text-[--offwhite] w-full rounded-xl font-semibold active:bg-[--input-active] max-h-[48px] h-full truncate;
+}
+
+.old-chat {
+    @apply p-3 my-[6px] min-h-[48px];
+}
+
+.new-chat {
+    @apply flex flex-row justify-between items-center p-3;
+}
+
+.profile-btn {
+    @apply flex flex-row gap-2 items-center p-[8.5px];
+}

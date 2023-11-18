@@ -8,6 +8,7 @@
     --background-gray: #242629;
     --light-text: #94A1B2;
     --input-active: #7F5AF0;
+    --input-active-hover: #7149eb;
     --input-idle: #3E3263;
     --border-outline: #303233;
 }
@@ -58,6 +59,10 @@ input:-webkit-autofill:active {
 
 .chat-btn {
     @apply bg-[--background-dark] hover:bg-[--input-idle] transition-colors duration-150 ease-linear text-[--offwhite] w-full rounded-xl font-semibold active:bg-[--input-active] max-h-[45px] h-full truncate text-sm;
+}
+
+.active-chat-btn {
+    @apply bg-[--input-active] hover:bg-[--input-active-hover];
 }
 
 .old-chat {

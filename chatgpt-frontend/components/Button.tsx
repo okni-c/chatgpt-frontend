@@ -7,11 +7,18 @@ interface IButton {
         username?: string
     },
     chatData?: {
-        name: string
-    }
+        question: string,
+        id: number
+    },
+    onClick: any,
+    isActive?: boolean | null,
 }
 
-export default function Button({ type, profileData, chatData }: IButton) {
+export default function Button({ type, profileData, chatData, onClick, isActive }: IButton) {
+
+    const handleClick = () => {
+        onClick(chatData!.id);
+    };
 
     const NewChatBtn = () => {
         return (
@@ -39,8 +46,9 @@ export default function Button({ type, profileData, chatData }: IButton) {
 
     const OldChatBtn = () => {
         return (
-            <button className="chat-btn old-chat">
-                {chatData?.name}
+            <button className={`chat-btn old-chat ${isActive ? `active-chat-btn` : ``}`}
+            onClick={handleClick}>
+                {chatData?.question}
             </button>
         );
     }
